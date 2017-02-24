@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+
+<class table="circular_mst" name="VO.CircularVO">
+
+
+<id name="circular_id" column="ID" type="int">
+
+<generator class="increment"/>
+
+</id>
+
+
+<property name="circular_title">
+
+<column name="circular_title"/>
+
+</property>
+
+
+<property name="circular_description">
+
+<column name="circular_description"/>
+
+</property>
+<property name="path">
+
+<column name="path"/>
+
+</property>
+
+</class>
+
+</hibernate-mapping>

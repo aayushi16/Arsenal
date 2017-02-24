@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+
+	<class table="gun_bulletMPG" name="VO.GunBulletVO">
+
+
+		<id name="bullet_id" column="ID" type="int">
+
+			<generator class="increment" />
+
+		</id>
+
+
+		<property name="bullet_no">
+
+			<column name="bullet_no" />
+
+		</property>
+
+		<many-to-one name="gunVO" class="VO.GunVO" column="GunId"></many-to-one>
+
+	</class>
+
+</hibernate-mapping>

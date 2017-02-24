@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class table="attendance_mst" name="VO.AttendanceVO">
+
+		
+<id name="att_id" column="ID" type="int">
+
+<generator class="increment"/>
+
+</id>
+		<property name="in_time">
+
+			<column name="in_time" />
+
+		</property>
+		
+
+		<property name="out_time">
+
+			<column name="out_time" />
+
+		</property>
+
+
+		<property name="date">
+
+			<column name="date" />
+
+		</property>
+		
+		<property name="details">
+
+			<column name="details" />
+
+		</property>
+	
+		<many-to-one name="userVO" class="VO.UserVO" column="UserId"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

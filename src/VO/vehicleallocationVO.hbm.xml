@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class table="vehicleallocation_mst" name="VO.VehicleallocationVO">
+
+		<id name="stock2_id" column="ID" type="int">
+
+			<generator class="increment" />
+
+		</id>
+		
+		<property name="quantity">
+
+			<column name="quantity" />
+
+		</property>
+		
+
+		<property name="assign_time">
+
+			<column name="assign_time" />
+
+		</property>
+
+
+		<property name="retrieve_time">
+
+			<column name="retrieve_time" />
+
+		</property>
+			<property name="assign_status">
+
+			<column name="assign_status" />
+
+		</property>
+		
+		<property name="return_status">
+
+			<column name="return_status" />
+
+		</property>
+		
+		<property name="gasoline">
+
+			<column name="gasoline_required" />
+
+		</property>
+		
+		<property name="kilometer">
+
+			<column name="kilometer_travelled" />
+
+		</property>
+		<many-to-one name="to" class="VO.UserVO" column="toSoldier"></many-to-one>
+		
+		<many-to-one name="vehicleVO" class="VO.VehicleVO" column="VehicleId"></many-to-one>
+		<many-to-one name="userVO" class="VO.UserVO" column="UserId"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

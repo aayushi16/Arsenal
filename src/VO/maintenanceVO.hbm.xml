@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class table="maintenance_mst" name="VO.MaintenanceVO">
+
+		
+<id name="m_id" column="ID" type="int">
+
+<generator class="increment"/>
+
+</id>
+		<property name="description">
+
+			<column name="description" />
+
+		</property>
+		
+
+		<property name="created_date">
+
+			<column name="created_date" />
+
+		</property>
+
+
+		<property name="modified_date">
+
+			<column name="modified_date" />
+
+		</property>
+		
+		<property name="status">
+
+			<column name="status" />
+
+		</property>
+		
+		<many-to-one name="to" class="VO.UserVO" column="toSoldier"></many-to-one>
+		
+	
+		<many-to-one name="userVO" class="VO.UserVO" column="UserId"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

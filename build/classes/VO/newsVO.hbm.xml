@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+
+<class table="news_mst" name="VO.NewsVO">
+
+
+<id name="news_id" column="ID" type="int">
+
+<generator class="increment"/>
+
+</id>
+
+
+<property name="news_title">
+
+<column name="news_title"/>
+
+</property>
+
+
+<property name="news_description">
+
+<column name="news_description"/>
+
+</property>
+
+</class>
+
+</hibernate-mapping>

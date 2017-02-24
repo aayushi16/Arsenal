@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class table="vehicle_mst" name="VO.VehicleVO">
+
+		<id name="vehicle_id" column="ID" type="int">
+
+			<generator class="increment" />
+
+		</id>
+		
+		<property name="vehicle_no">
+
+			<column name="vehicle_no" />
+
+		</property>
+		
+
+		<property name="vehicle_name">
+
+			<column name="vehicle_name" />
+
+		</property>
+
+
+		<property name="vehicle_description">
+
+			<column name="vehicle_description" />
+
+		</property>
+		
+		<many-to-one name="categoryVO" class="VO.CategoryVO" column="CategoryId"></many-to-one>
+		<many-to-one name="userVO" class="VO.UserVO" column="UserId"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

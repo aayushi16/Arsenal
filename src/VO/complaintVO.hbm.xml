@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class table="complaint_mst" name="VO.ComplaintVO">
+
+		
+<id name="c_id" column="ID" type="int">
+
+<generator class="increment"/>
+
+</id>
+		<property name="complaint_name">
+
+			<column name="complaint_name" />
+
+		</property>
+		
+
+		<property name="complaint_type">
+
+			<column name="complaint_type" />
+
+		</property>
+
+
+		<property name="complaint_date">
+
+			<column name="complaint_date" />
+
+		</property>
+		
+		<property name="message">
+
+			<column name="message" />
+
+		</property>
+		
+		<property name="reply">
+
+			<column name="reply" />
+
+		</property>
+		
+			<property name="email">
+
+			<column name="email" />
+
+		</property>
+		
+			<property name="status">
+
+			<column name="status" />
+
+		</property>
+	
+		<many-to-one name="userVO" class="VO.UserVO" column="UserId"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

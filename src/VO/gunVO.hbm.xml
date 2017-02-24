@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class table="gun_mst" name="VO.GunVO">
+
+		<id name="gun_id" column="ID" type="int">
+
+			<generator class="increment" />
+
+		</id>
+		
+		<property name="gun_no">
+
+			<column name="gun_no" />
+
+		</property>
+		
+
+		<property name="gun_name">
+
+			<column name="gun_name" />
+
+		</property>
+
+
+		<property name="gun_description">
+
+			<column name="gun_description" />
+
+		</property>
+		
+		<property name="latitude" >
+
+			<column name="latitude" />
+
+		</property>
+		<property name="longitude" >
+
+			<column name="longitude" />
+
+		</property>
+		
+		<many-to-one name="categoryVO" class="VO.CategoryVO" column="CategoryId"></many-to-one>
+		<many-to-one name="userVO" class="VO.UserVO" column="UserId"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>
